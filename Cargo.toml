@@ -1,0 +1,20 @@
+[package]
+name = "Team5SoftwareProject"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.38"
+clap = { version = "4.5.18", features = ["derive"] }
+home = "0.5.9"
+json = "0.12.4"
+notify-rust = "4.11.3"
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+ron = "0.8.1"
+serde = { version = "1.0.213", features = ["derive"] }
+
+[target.'cfg(windows)'.dependencies]
+windows-service = "0.7.0"
+
+[target.'cfg(unix)'.dependencies]
+daemonize = "0.5.0"
